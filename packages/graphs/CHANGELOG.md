@@ -1,3 +1,26 @@
+
+## 1.2.7
+
+`2022-08-25`
+
+- 🔥 nodeCfg 新增 `percent` 配置
+
+<img src=https://gw.alipayobjects.com/zos/antfincdn/9UCy2n8WPu/fe8e1b07-efde-4ba8-9e83-97986f668faf.png>
+
+## 1.2.6
+
+`2022-08-23`
+
+- 🐞 修复 `edgeCfg` 透传错误
+
+## 1.2.5
+
+`2022-08-22`
+
+- 🔥 `RadialGraph` 升级，可以动态拓展
+- 🔥 新增 `fetchLoading` 配置，可配合 `asyncData` `getChildren` 等配置做自定义loading
+- 🐞 完善 `layout` 定义
+
 ## 1.2.4
 
 `2022-08-19`

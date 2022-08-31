@@ -18,7 +18,7 @@ import {
   ShapeStyle,
   StateStyles,
   TreeGraphData as G6TreeGraphData,
-  Item,
+  GraphData,
 } from '@antv/g6';
 
 import { MenuConfig } from './plugins';
@@ -47,7 +47,6 @@ export interface MiniMapConfig {
   refresh?: boolean;
   padding?: number;
 }
-
 export type Shape = Edge | Node;
 export type ShapeCfg = EdgeConfig<string | object> | NodeConfig;
 export type IShapeStyle =
@@ -56,6 +55,11 @@ export type IShapeStyle =
 export type ILabelStyle =
   | LabelStyle
   | ((edge: Shape | ShapeCfg, graph: IGraph | IGroup | undefined, name?: string) => LabelStyle);
+
+export interface FetchLoading {
+  /** 异步请求时的加载动画，仅在配置了异步请求时生效 */
+  fetchLoading?: React.ReactNode | ((item: NodeConfig) => React.ReactNode);
+}
 
 export interface ArrowConfig extends G6ArrowConfig {
   /** 是否展示 */
@@ -124,6 +128,15 @@ export interface BadgeCfg {
   size?: number | number[];
   /** 标记样式 */
   style?: IShapeStyle;
+}
+
+export interface PercentCfg extends Omit<BadgeCfg, 'position' | 'size'> {
+  /** 标记高度 */
+  size?: number;
+  /** 标记位置 */
+  position?: 'top' | 'bottom';
+  /** 占比背景色 */
+  backgroundStyle?: IShapeStyle;
 }
 
 type PluginContainer<T> = {
@@ -209,6 +222,8 @@ export interface CardNodeCfg extends NodeCfg {
   padding?: number | number[];
   /** 节点标记 */
   badge?: BadgeCfg;
+  /** 占比标记 */
+  percent?: PercentCfg;
   /** 是否自动调节节点宽度 */
   autoWidth?: boolean;
   /** 自定义节点 */
@@ -266,7 +281,7 @@ export type IMarkerCfg = MarkerCfg | ((cfg: CardNodeCfg, graph: IGraph | IGroup 
 export type Datum = Record<string, any>;
 
 // Graph 通用配置
-export interface CommonConfig extends GraphContainerConfig {
+export interface CommonConfig<T = any> extends GraphContainerConfig {
   data: Datum;
   /** 是否缩放节点大小自适应容器 */
   autoFit?: boolean;
@@ -276,7 +291,7 @@ export interface CommonConfig extends GraphContainerConfig {
   height?: number;
   pixelRatio?: number;
   /** 不同组件 layout 有差别，参考对应组件文档 */
-  layout?: any;
+  layout?: T;
   /** 边配置 */
   edgeCfg?: EdgeCfg;
   /** 节点配置 */
@@ -322,17 +337,16 @@ export interface CommonConfig extends GraphContainerConfig {
   /** 图表渲染完成回调 */
   onReady?: (graph: IGraph) => void;
 }
-export type TreeGraphData = NodeData<{
+export type CardItem = {
   title?: string;
   items?: CardItems[];
-}>;
+  /** 归一化百分比，仅在 `nodeCfg.percent` 配置时生效 */
+  percent?: number;
+};
+
+export type TreeGraphData = NodeData<CardItem>;
 // 流向图节点数据
-export type FlowGraphNodeData = NodeData<
-  {
-    title?: string;
-    items?: CardItems[];
-  }[]
->;
+export type FlowGraphNodeData = NodeData<CardItem[]>;
 export type FlowGraphEdgeData = EdgeData<string>;
 
 // 流向图数据
@@ -358,4 +372,5 @@ export {
   IPoint,
   IShape,
   G6TreeGraphData,
+  GraphData,
 };
