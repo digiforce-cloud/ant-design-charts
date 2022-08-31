@@ -160,7 +160,7 @@ namespace NSToolbarConfig {
             renderKey: 'GROUP_NODE_RENDER_ID', // xflow 需要导出
             groupChildren,
             groupCollapsedSize: { width: 200, height: 40 },
-            label: '新建群组',
+            label: 'Group',
           },
         });
       },
@@ -254,52 +254,52 @@ export const useToolbarConfig = createToolbarConfig<FlowchartProps['toolbarPanel
     commands = [
       {
         command: CommandPool.REDO_CMD,
-        tooltip: '重做',
+        tooltip: 'Redo',
         iconName: 'RedoOutlined',
       },
       {
         command: CommandPool.UNDO_CMD,
-        tooltip: '撤销',
+        tooltip: 'Undo',
         iconName: 'UndoOutlined',
       },
       {
         command: CommandPool.FRONT_NODE,
-        tooltip: '置前',
+        tooltip: 'To Front',
         iconName: 'VerticalAlignTopOutlined',
       },
       {
         command: CommandPool.BACK_NODE,
-        tooltip: '置后',
+        tooltip: 'To Back',
         iconName: 'VerticalAlignBottomOutlined',
       },
       {
         command: CommandPool.MULTI_SELECT,
-        tooltip: '开启框选',
+        tooltip: 'Multi Select',
         iconName: 'GatewayOutlined',
       },
       {
         command: CommandPool.ADD_GROUP,
-        tooltip: '新建群组',
+        tooltip: 'Group',
         iconName: 'GroupOutlined',
       },
       {
         command: CommandPool.DEL_GROUP,
-        tooltip: '解散群组',
+        tooltip: 'Ungroup',
         iconName: 'UngroupOutlined',
       },
       {
         command: CommandPool.COPY,
-        tooltip: '复制',
+        tooltip: 'Copy',
         iconName: 'CopyOutlined',
       },
       {
         command: CommandPool.PASTE,
-        tooltip: '粘贴',
+        tooltip: 'Paste',
         iconName: 'SnippetsOutlined',
       },
       {
         command: CommandPool.SAVE_GRAPH_DATA,
-        tooltip: '保存',
+        tooltip: 'Save',
         iconName: 'SaveOutlined',
       },
     ] as CommandItem[],

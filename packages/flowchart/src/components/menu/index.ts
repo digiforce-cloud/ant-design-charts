@@ -12,7 +12,7 @@ export namespace NsMenuItemConfig {
 
   export const DELETE_EDGE: IMenuOptions = {
     id: XFlowEdgeCommands.DEL_EDGE.id,
-    label: '删除边',
+    label: 'Delete',
     iconName: 'DeleteOutlined',
     onClick: async ({ target, commandService }) => {
       if (target.data) {
@@ -25,7 +25,7 @@ export namespace NsMenuItemConfig {
 
   export const DELETE_NODE: IMenuOptions = {
     id: XFlowNodeCommands.DEL_NODE.id,
-    label: '删除节点',
+    label: 'Delete',
     iconName: 'DeleteOutlined',
     onClick: async ({ target, commandService }) => {
       if (target.data && target?.data?.id) {
@@ -38,7 +38,7 @@ export namespace NsMenuItemConfig {
 
   export const EMPTY_MENU: IMenuOptions = {
     id: 'EMPTY_MENU_ITEM',
-    label: '暂无可用',
+    label: 'Not available yet',
     isEnabled: false,
     iconName: 'DeleteOutlined',
   };

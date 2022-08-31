@@ -52,16 +52,16 @@ const formSchemaService = async (args) => {
   const nodeSchema = {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',
             controls: [
               {
-                label: '节点名',
-                name: '自定义form',
+                label: 'Node',
+                name: 'Custom Form',
                 shape: 'rename-service',
-                placeholder: '节点名称',
+                placeholder: 'Node name',
               },
             ],
           },
@@ -85,7 +85,7 @@ const formSchemaService = async (args) => {
   return {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',

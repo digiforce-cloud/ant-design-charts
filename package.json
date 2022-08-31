@@ -9,7 +9,8 @@
     "start:site": "lerna run start:site --stream --scope=@ant-design/charts-site",
     "test": "lerna run test --stream",
     "lint": "lerna run lint --stream",
-    "build": "lerna run build --stream --profile --profile-location=logs/profile/",
+    "build": "lerna run build --stream --profile --profile-location=logs/profile/ --scope @ant-design/flowchart",
+    "buildall": "lerna run build --stream --profile --profile-location=logs/profile/",
     "build:site": "lerna run build:site --stream",
     "profile": "webpack --config webpack.config.js --mode production --profile --json > stats.json",
     "prettier": "prettier --write \"**/**.{js,jsx,tsx,ts,less,md,json}\"",
@@ -74,6 +75,8 @@
   "resolutions": {
     "**/@typescript-eslint/eslint-plugin": "^4.1.1",
     "**/@typescript-eslint/parser": "^4.1.1",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
     "monaco-editor": "0.21.3"
   },
   "gitHooks": {

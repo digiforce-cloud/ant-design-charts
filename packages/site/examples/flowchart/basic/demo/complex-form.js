@@ -110,16 +110,16 @@ const formSchemaService = async (args) => {
   const groupSchema = {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',
             controls: [
               {
-                label: '分组名',
+                label: 'Group name',
                 name: 'custom-group-service',
                 shape: 'custom-group-service',
-                placeholder: '分组名称',
+                placeholder: 'Group name',
               },
             ],
           },
@@ -130,16 +130,16 @@ const formSchemaService = async (args) => {
   const nodeSchema = {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',
             controls: [
               {
-                label: '节点名',
+                label: 'Node',
                 name: 'custom-node-service',
                 shape: 'custom-node-service',
-                placeholder: '节点名称',
+                placeholder: 'Node name',
               },
             ],
           },
@@ -150,16 +150,16 @@ const formSchemaService = async (args) => {
   const edgeSchema = {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',
             controls: [
               {
-                label: '边',
+                label: 'Edge',
                 name: 'custom-edge-service',
                 shape: 'custom-edge-service',
-                placeholder: '边名称',
+                placeholder: 'Edge name',
               },
             ],
           },
@@ -179,7 +179,7 @@ const formSchemaService = async (args) => {
   return {
     tabs: [
       {
-        name: '设置',
+        name: 'Setup',
         groups: [
           {
             name: 'groupName',

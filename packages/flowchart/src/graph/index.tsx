@@ -10,7 +10,7 @@ import {
   FlowchartFormPanel,
   CanvasScaleToolbar,
   FlowchartExtension,
-  // CanvasMiniMap,
+  CanvasMiniMap,
 } from '@antv/xflow';
 import { ToolbarPanel } from '../components/toolbar';
 import { useMenuConfig } from '../components/menu';
@@ -103,7 +103,7 @@ const Flowchart: React.FC<FlowchartProps> = (props) => {
           <ToolbarPanel {...toolbarPanelProps} flowchartId={uuidv4Ref.current} />
           <FlowchartNodePanel {...nodePanelProps} />
           <FlowchartCanvas
-            config={{ ...canvasProps, onAddNode }}
+            config={{ ...canvasProps.config, onAddNode }}
             mode={mode}
             onAddEdge={onAddEdge}
             onConfigChange={onConfigChange}

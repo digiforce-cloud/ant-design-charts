@@ -1,6 +1,9 @@
 import type * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import type { Root } from 'react-dom/client';
+// import type { Root } from 'react-dom/client';
+// import { createRoot } from 'react-dom'
+
+declare type Root = any;
 
 // Let compiler not to search module usage
 const fullClone = {
@@ -12,7 +15,7 @@ const fullClone = {
   createRoot?: CreateRoot;
 };
 
-type CreateRoot = (container: ContainerType) => Root;
+type CreateRoot = (container: ContainerType) => any;
 
 const { version, render: reactRender, unmountComponentAtNode } = fullClone;
 
