@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Flowchart } from '@ant-design/flowchart';
+import { Flowchart } from '@digiforce-cloud/flowdesigner';
 
 const DATA = {
   nodes: [

@@ -31,7 +31,7 @@
     "copy": "node ./scripts/copy.js"
   },
   "dependencies": {
-    "@ant-design/flowchart": "^1.0.2",
+    "@digiforce-cloud/flowdesigner": "^1.0.2",
     "@ant-design/graphs": "^1.0.1",
     "@ant-design/maps": "^1.0.1",
     "@ant-design/plots": "^1.0.2"

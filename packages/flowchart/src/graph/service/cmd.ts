@@ -1,4 +1,4 @@
-import { createCmdConfig, DisposableCollection, uuidv4 } from '@antv/xflow';
+import { createCmdConfig, DisposableCollection, uuidv4 } from '@digiforce-cloud/xflow';
 
 export const useCmdConfig = createCmdConfig((config, proxy) => {
   // 设置hook

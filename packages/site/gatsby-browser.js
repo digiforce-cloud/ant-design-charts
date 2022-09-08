@@ -6,6 +6,6 @@ window.react = require('react');
 window.reactDom = require('react-dom');
 /** 不要使用 link, react-dom 冲突 */
 window.plots = require('@ant-design/plots');
-window.flowchart = require('@ant-design/flowchart');
+window.flowchart = require('@digiforce-cloud/flowdesigner');
 window.maps = require('@ant-design/maps');
 window.graphs = require('@ant-design/graphs');

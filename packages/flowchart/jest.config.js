@@ -5,6 +5,6 @@ module.exports = {
   moduleNameMapper: {
     '^lodash-es$': 'lodash',
     '^.+\\.(css|less)$': 'identity-obj-proxy',
-    '@antv/xflow': '<rootDir>/../../node_modules/@antv/xflow/dist/index.umd.js',
+    '@digiforce-cloud/xflow': '<rootDir>/../../node_modules/@digiforce-cloud/xflow/dist/index.umd.js',
   },
 };

@@ -11,7 +11,7 @@ import {
   NsNodeCmd,
   IconStore,
   MODELS,
-} from '@antv/xflow';
+} from '@digiforce-cloud/xflow';
 import { getProps, Log, getGraphHistory, getGraphInstance } from '../../util';
 import {
   UngroupOutlined,

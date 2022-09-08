@@ -1,5 +1,5 @@
 {
-  "name": "@ant-design/flowchart",
+  "name": "@digiforce-cloud/flowdesigner",
   "version": "1.2.1",
   "description": "Flowchart",
   "bugs": {
@@ -39,10 +39,10 @@
   },
   "dependencies": {
     "@antv/layout": "^0.1.17",
-    "@antv/x6": "^1.25.0",
-    "@antv/x6-react-components": "^1.1.13",
-    "@antv/x6-react-shape": "^1.4.5",
-    "@antv/xflow": "^1.0.0",
+    "@digiforce-cloud/x6": "^1.25.0",
+    "@digiforce-cloud/x6-react-components": "^1.1.13",
+    "@digiforce-cloud/x6-react-shape": "^1.4.5",
+    "@digiforce-cloud/xflow": "^1.0.0",
     "react-color": "2.17.3",
     "react-use": "17.3.1"
   },

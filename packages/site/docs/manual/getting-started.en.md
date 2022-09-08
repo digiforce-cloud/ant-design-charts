@@ -22,7 +22,7 @@ import { Line } from '@ant-design/charts';
 Related subpackages
 - Plots: `@ant-design/plots`
 - Maps: `@ant-design/maps`
-- Flowchart: `@ant-design/flowchart`
+- Flowchart: `@digiforce-cloud/flowdesigner`
 - Relation Graphs: `@ant-design/graphs`
 
 
@@ -46,7 +46,7 @@ You can download the script locally or import it directly from online resources.
 // Plots 
 <script type="text/javascript" src="https://unpkg.com/@ant-design/plots@latest/dist/plots.min.js"></script>
 // Flowchart 
-<script type="text/javascript" src="https://unpkg.com/@ant-design/flowchart@latest/dist/flowchart.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@digiforce-cloud/flowdesigner@latest/dist/flowchart.min.js"></script>
 // Maps 
 <script type="text/javascript" src="https://unpkg.com/@ant-design/maps@latest/dist/maps.min.js"></script>
 // Graphs 

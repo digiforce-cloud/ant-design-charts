@@ -1,5 +1,5 @@
 import { getProps, getGraphInstance, getAppInstance } from './global';
-import { XFlowGraphCommands, NsGraphCmd } from '@antv/xflow';
+import { XFlowGraphCommands, NsGraphCmd } from '@digiforce-cloud/xflow';
 
 export const Log = window.console;
 

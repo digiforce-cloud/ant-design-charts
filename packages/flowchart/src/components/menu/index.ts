@@ -1,6 +1,6 @@
-import type { NsNodeCmd, NsEdgeCmd, IMenuOptions, NsGraph } from '@antv/xflow';
-import { createCtxMenuConfig, MenuItemType } from '@antv/xflow';
-import { IconStore, XFlowNodeCommands, XFlowEdgeCommands } from '@antv/xflow';
+import type { NsNodeCmd, NsEdgeCmd, IMenuOptions, NsGraph } from '@digiforce-cloud/xflow';
+import { createCtxMenuConfig, MenuItemType } from '@digiforce-cloud/xflow';
+import { IconStore, XFlowNodeCommands, XFlowEdgeCommands } from '@digiforce-cloud/xflow';
 import { DeleteOutlined, EditOutlined, StopOutlined } from '@ant-design/icons';
 
 /** menuitem 配置 */

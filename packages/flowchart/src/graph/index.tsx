@@ -11,7 +11,7 @@ import {
   CanvasScaleToolbar,
   FlowchartExtension,
   CanvasMiniMap,
-} from '@antv/xflow';
+} from '@digiforce-cloud/xflow';
 import { ToolbarPanel } from '../components/toolbar';
 import { useMenuConfig } from '../components/menu';
 import { setProps, setInstance, excLoadData } from '../util';

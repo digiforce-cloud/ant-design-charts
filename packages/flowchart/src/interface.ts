@@ -11,8 +11,8 @@ import {
   KeybindingConfig,
   IFlowchartGraphProps,
   IFlowchartNodePanelProps,
-} from '@antv/xflow';
-import { Cell, Graph } from '@antv/x6';
+} from '@digiforce-cloud/xflow';
+import { Cell, Graph } from '@digiforce-cloud/x6';
 import { PopoverProps as AntDPopoverConfig } from 'antd/es/popover';
 
 export interface FlowchartContainerProps {

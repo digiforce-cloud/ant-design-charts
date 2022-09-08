@@ -13,7 +13,7 @@ import {
   FlowchartFormWrapper as FormWrapper,
   EditorPanels,
   FlowchartService,
-} from '@antv/xflow';
+} from '@digiforce-cloud/xflow';
 // 临时方案
 import Flowchart from './graph';
 

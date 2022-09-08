@@ -1,5 +1,5 @@
 /** 向 graph 原型上挂在一系列方法 */
-import { IApplication } from '@antv/xflow';
+import { IApplication } from '@digiforce-cloud/xflow';
 import { getGraphData, excLoadData } from '../util';
 import { IFlowchartGraph as IGraph } from '../interface';
 

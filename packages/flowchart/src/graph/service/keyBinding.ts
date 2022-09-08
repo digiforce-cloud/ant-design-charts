@@ -6,7 +6,7 @@ import {
   MODELS,
   NsGraphCmd,
   XFlowGraphCommands,
-} from '@antv/xflow';
+} from '@digiforce-cloud/xflow';
 
 export const useKeybindingConfig = createKeybindingConfig((config) => {
   config.setKeybindingFunc((regsitry) => {

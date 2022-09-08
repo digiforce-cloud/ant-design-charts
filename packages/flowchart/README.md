@@ -1,11 +1,11 @@
-# @ant-design/flowchart
+# @digiforce-cloud/flowdesigner
 
 <div align="center">
 
 Flowchart solutions, based on  [XFlow](https://github.com/antvis/xflow).
 
 ![npm](https://img.shields.io/npm/v/@ant-design/charts)
-![npm](https://img.shields.io/npm/dm/@ant-design/flowchart)
+![npm](https://img.shields.io/npm/dm/@digiforce-cloud/flowdesigner)
 [![GitHub stars](https://img.shields.io/github/stars/ant-design/ant-design-charts)](https://github.com/ant-design/ant-design-charts/stargazers)
 [![npm License](https://img.shields.io/npm/l/@ant-design/charts.svg)](https://www.npmjs.com/package/@ant-design/charts)
 
@@ -33,7 +33,7 @@ Flowchart solutions, based on  [XFlow](https://github.com/antvis/xflow).
 ## 📦 Installation
 
 ```bash | pure
-$ npm install @ant-design/flowchart
+$ npm install @digiforce-cloud/flowdesigner
 ```
 
 
@@ -41,9 +41,9 @@ $ npm install @ant-design/flowchart
 
 ```tsx | pure
 import React from 'react';
-import { Flowchart } from '@ant-design/flowchart';
+import { Flowchart } from '@digiforce-cloud/flowdesigner';
 import "antd/dist/antd.css";
-import "@ant-design/flowchart/dist/index.css";
+import "@digiforce-cloud/flowdesigner/dist/index.css";
 
 const DemoFlowchart = () => {
   return (

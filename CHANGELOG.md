@@ -73,7 +73,7 @@
 
 - 🆕 新增流程图 [Flowchart](https://charts.ant.design/zh/examples/flowchart/basic#basic)
 
-流程图除 `react`、`react-dom` 外，还依赖 `antd`、`@ant-design/icons`、`lodash`，使用时确保已经安装，同时记得引入样式文件 `import "@ant-design/flowchart/dist/index.css";`
+流程图除 `react`、`react-dom` 外，还依赖 `antd`、`@ant-design/icons`、`lodash`，使用时确保已经安装，同时记得引入样式文件 `import "@digiforce-cloud/flowdesigner/dist/index.css";`
 
 ```ts
 "peerDependencies": {
@@ -87,14 +87,14 @@
 
 ```tsx
 import { Flowchart } from '@ant-design/charts';
-import "@ant-design/flowchart/dist/index.css";
+import "@digiforce-cloud/flowdesigner/dist/index.css";
 ```
 
 - 🆕 新增地理可视化 [Maps](https://charts.ant.design/zh/examples/map-area/division#chinese-provinces)
 - 🆕 新增 CirclePacking
 - 🆕 Ant Design Charts 完成拆包，推荐使用子包
   - 统计图表：@ant-design/plots
-  - 流程图：@ant-design/flowchart
+  - 流程图：@digiforce-cloud/flowdesigner
   - 地理可视化：@ant-design/maps
   - 关系图：@ant-design/graphs
 

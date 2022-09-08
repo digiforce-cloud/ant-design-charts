@@ -22,11 +22,11 @@ import { Line } from '@ant-design/charts';
 也可仅引入相关子包
 - 统计图表：`@ant-design/plots`
 - 地图：`@ant-design/maps`
-- 流程图：`@ant-design/flowchart`
+- 流程图：`@digiforce-cloud/flowdesigner`
 - 关系图：`@ant-design/graphs`
 
 
-流程图除 `react`、`react-dom` 外，还依赖 `antd`、`@ant-design/icons`、`lodash`，使用时确保已经安装，同时记得引入样式文件 `import "@ant-design/flowchart/dist/index.css";`
+流程图除 `react`、`react-dom` 外，还依赖 `antd`、`@ant-design/icons`、`lodash`，使用时确保已经安装，同时记得引入样式文件 `import "@digiforce-cloud/flowdesigner/dist/index.css";`
 
 ```ts
 "peerDependencies": {
@@ -46,7 +46,7 @@ import { Line } from '@ant-design/charts';
 // Plots 相关的图表
 <script type="text/javascript" src="https://unpkg.com/@ant-design/plots@latest/dist/plots.min.js"></script>
 // Flowchart 相关的图表
-<script type="text/javascript" src="https://unpkg.com/@ant-design/flowchart@latest/dist/flowchart.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@digiforce-cloud/flowdesigner@latest/dist/flowchart.min.js"></script>
 // Maps 相关的图表
 <script type="text/javascript" src="https://unpkg.com/@ant-design/maps@latest/dist/maps.min.js"></script>
 // Graphs 相关的图表
