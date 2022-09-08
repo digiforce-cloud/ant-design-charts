@@ -42,6 +42,7 @@ const Flowchart: React.FC<FlowchartProps> = (props) => {
     data,
     mode,
     onReady,
+    meta,
   } = props as any;
   const uuidv4Ref = useRef<string>(uuidv4());
   const container = useRef<HTMLDivElement>();
@@ -90,6 +91,7 @@ const Flowchart: React.FC<FlowchartProps> = (props) => {
           onAppDestroy={onDestroy}
           isAutoCenter={isAutoCenter}
           onAppConfigReady={onConfigReady}
+          meta={meta}
           onLoad={async (app) => {
             const X6Graph = (await app.getGraphInstance()) as any;
             setInstance(X6Graph, app, uuidv4Ref.current);

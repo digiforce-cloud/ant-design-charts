@@ -123,6 +123,16 @@ export interface DetailPanelProps extends BaseProps {
   prefixClz?: string;
   header?: React.ReactNode;
   footer?: React.ReactNode;
+  formValueUpdateService?: (args: {
+    cell: Cell;
+    targetType: NsJsonSchemaForm.TargetType;
+    targetData: NsJsonSchemaForm.TargetData;
+    modelService: IModelService;
+    commandService: IGraphCommandService;
+  }) => Promise<void>;
+  bodyPosition?: any;
+  footerPosition?: any;
+  targetType?: any;
 }
 
 export interface GraphEvents {
@@ -148,6 +158,7 @@ export interface IGraphConfig {}
 
 // Flowchart 通用配置
 export interface FlowchartProps extends FlowchartContainerProps {
+  meta?: any;
   /** 默认数据 */
   data?: Datum;
   /** 主题 */
