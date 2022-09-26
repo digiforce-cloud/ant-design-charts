@@ -26,7 +26,7 @@ import {
   SnippetsOutlined,
 } from '@ant-design/icons';
 import { CommandPool } from './constants';
-import { CommandItem, FlowchartProps } from '../../interface';
+import { CommandItem, FlowchartProps, CustomToolbarGroup } from '../../interface';
 
 export namespace TOOLBAR_ITEMS {
   export const BACK_NODE = XFlowNodeCommands.BACK_NODE.id;
@@ -84,6 +84,7 @@ namespace NSToolbarConfig {
     getIconConfig: any,
     commands: CommandItem[],
     flowchartId: string,
+    customToolbarGroups: CustomToolbarGroup[],
   ) => {
     const toolbarGroup: IToolbarItemOptions[] = [];
     const history = getGraphHistory(flowchartId);
@@ -215,8 +216,10 @@ namespace NSToolbarConfig {
         });
       },
     });
-    return [
+
+    let toolbarConfig = [
       {
+        index: 100,
         name: 'graphData',
         items: toolbarGroup
           .filter((item) => !!item?.iconName)
@@ -228,6 +231,15 @@ namespace NSToolbarConfig {
           }),
       },
     ];
+
+    if (customToolbarGroups && customToolbarGroups.length) {
+      toolbarConfig = [...customToolbarGroups, ...toolbarConfig];
+
+      toolbarConfig = toolbarConfig.sort((a, b) => {
+        return a.index - b.index;
+      });
+    }
+    return toolbarConfig;
   };
 }
 
@@ -318,7 +330,13 @@ export const useToolbarConfig = createToolbarConfig<FlowchartProps['toolbarPanel
   toolbarConfig.setToolbarModelService(async (toolbarModel, modelService, toDispose) => {
     const updateToolbarModel = async () => {
       const state = await NSToolbarConfig.getToolbarState(modelService);
-      const toolbarItems = await NSToolbarConfig.getToolbarItems(state, getIconConfig, commands, flowchartId);
+      const toolbarItems = await NSToolbarConfig.getToolbarItems(
+        state,
+        getIconConfig,
+        commands,
+        flowchartId,
+        toolbarPanelProps.customToolbarGroups,
+      );
 
       toolbarModel.setValue((toolbar) => {
         toolbar.mainGroups = toolbarItems;

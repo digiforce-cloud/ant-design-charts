@@ -11,6 +11,7 @@ import {
   KeybindingConfig,
   IFlowchartGraphProps,
   IFlowchartNodePanelProps,
+  IToolbarItemOptions,
 } from '@digiforce-cloud/xflow';
 import { Cell, Graph } from '@digiforce-cloud/x6';
 import { PopoverProps as AntDPopoverConfig } from 'antd/es/popover';
@@ -86,9 +87,17 @@ export type CommandItem = {
   /** iconName */
   iconName?: string;
 };
+
+export interface CustomToolbarGroup {
+  index: number;
+  name: string;
+  items: IToolbarItemOptions[];
+}
+
 export interface ToolbarPanelProps extends BaseProps {
   commands?: CommandItem[];
   layout?: IToolbarLayout;
+  customToolbarGroups?: CustomToolbarGroup[];
   readonly flowchartId?: string;
 }
 
